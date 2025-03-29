@@ -1,10 +1,10 @@
 export const API_ENDPOINTS = {
-  USUARIOS: {
-    BASE: '/api/usuarios',
-    GET_ALL: '/api/usuarios',
-    GET_BY_ID: (id) => `/api/usuarios/${id}`,
-    CREATE: '/api/usuarios',
-    UPDATE: (id) => `/api/usuarios/${id}`,
-    DELETE: (id) => `/api/usuarios/${id}`
+  EMPLEADO: {
+    BASE: '/api/Empleado',
+    GET_ALL: '/api/Empleado',
+    GET_BY_ID: (id) => `/api/Empleado/${id}`,
+    CREATE: '/api/Empleado',
+    UPDATE: (id) => `/api/Empleado/${id}`,
+    DELETE: (id) => `/api/Empleado/${id}`
   }
 };

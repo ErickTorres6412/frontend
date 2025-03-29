@@ -33,12 +33,13 @@ export const createGenericService = (baseEndpoint) => ({
     }
   },
 
-  update: async (id, data) => {
+  update: async (data) => {
     try {
-      const response = await axios.put(`${API_BASE_URL}${baseEndpoint}/${id}`, data);
+      // Envía la solicitud a /api/Empleado sin incluir el ID en la URL
+      const response = await axios.put(`${API_BASE_URL}${baseEndpoint}`, data);
       return response.data;
     } catch (error) {
-      console.error(`Error updating item with id ${id} in ${baseEndpoint}:`, error);
+      console.error(`Error updating item in ${baseEndpoint}:`, error);
       throw error;
     }
   },

@@ -5,7 +5,7 @@ import { Package } from 'lucide-react';
       title: 'CRUD',
       icon: Package,
       subItems: [
-        { label: 'Usuarios', link: '/usuarios' }
+        { label: 'Empleados', link: '/empleados' }
       ]
     }
   ];

@@ -65,11 +65,13 @@ export const useCRUD = (service, options = {}) => {
     }
   };
 
-  const update = async (id, updatedItem) => {
+  const update = async (updatedItem) => {
     try {
-      const updatedData = await service.update(id, updatedItem);
+      console.log('Updating item:', updatedItem);
+      const updatedData = await service.update(updatedItem);
+      // Asumiendo que updatedItem ya contiene el ID como empleadoId
       const newData = data.map(item => 
-        item.id === id ? updatedData : item
+        item.id === updatedItem.empleadoId ? updatedData : item
       );
       setData(newData);
       showSuccessAlert(config.successMessages.update);
